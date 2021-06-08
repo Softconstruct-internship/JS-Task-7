@@ -1,0 +1,81 @@
+.left_column {
+    background-color: #fff;
+    color: $navbar_font_color;
+}
+
+.nav-img {
+    background-image: url("../assets/img/avatar_hat.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    .img-name {
+        margin: 10px;
+        font-size: 30px;
+        color: black;
+    }
+}
+
+.nav_content {
+    padding: 16px;
+}
+
+.nav_desc {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    .desc_item {
+        margin: 8px 0;
+       .desc_item_name{
+            padding-left: 10px;
+        }
+    }
+}
+
+.main-skills-container {
+    margin-top: 15px;
+    .skills-header {
+        font-size: $navbar_fontsize;
+        font-weight: $navbar_fontWeight;
+        margin-bottom: $navbar_marginbottom;
+        display: inline-block;
+        padding-left: 10px;
+    }
+    .navbar_header_languages {
+        margin-top: 25px;
+    }
+    .skill_element_name {
+        font-size: $navbar_skill_fontsize;
+        font-weight: $navbar_skill_fontweight;
+        padding: 10px 0px 10px;
+    }
+    .percent {
+        .percent_value {
+            color: $color-skill;
+            background-color: $background-color-skill;
+            font-size: 12px !important;
+            margin: 10px 10px 10px 0 !important;
+        }
+    }
+}
+.main_skills_container_language {
+    .skills-header-languages {
+        padding: 40px 0 20px 0;
+    }
+    .percent {
+        .percent_value {
+            height: 25px;
+            background-color: $background-color-skill;
+        }
+    }
+    .skill_element_name {
+        padding: 20px 0 20px 0;
+    }
+
+    .skills-header-languages {
+        font-size: 18px !important;
+        display: inline-block;
+        padding-left: 10px;
+    }
+}

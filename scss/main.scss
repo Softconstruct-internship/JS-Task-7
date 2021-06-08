@@ -1,0 +1,67 @@
+@import "variables";
+@import "mixins";
+@import "nav";
+@import "work-experience";
+@import "education";
+@import "footer";
+
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f1f1f1 !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1400px;
+  font-family: $font_family;
+}
+i {
+  color: $icon_main_color;
+}
+.main_container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  min-height: 100vh;
+  grid-template-areas:
+    "left_column work_experience"
+    "left_column education"
+    "footer footer";
+}
+
+.left_column {
+  grid-area: left_column;
+
+  @include box-shadow(1px, 2px, 9px, #333);
+  .percent {
+    @include percent(2px, blue);
+  }
+}
+
+.work_experience {
+  grid-area: work_experience;
+  background-color: white;
+  @include box-shadow(1px, 2px, 9px, #333);
+  .percent {
+    @include percent(2px, blue);
+  }
+}
+
+.education {
+  grid-area: education;
+  background-color: white;
+  @include box-shadow(1px, 2px, 9px, #333);
+  .percent {
+    @include percent(2px, blue);
+  }
+}
+
+.footer {
+  grid-area: footer;
+  padding: 15px;
+  background-color: #009688;
+}

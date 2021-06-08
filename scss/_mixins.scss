@@ -1,0 +1,25 @@
+@mixin percent($padding, $backgroundColor, $color: white, $fontSize: 15px) {
+    border-radius: $percentRadius;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    .percent_value {
+        width: 50%;
+        display: inline-block;
+        border-radius: $percentRadius;
+        color: $color;
+        padding: $padding;
+        font-size: $fontSize;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        background-color: $backgroundColor;
+    }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+      box-shadow:inset $top $left $blur $color;
+    } @else {
+      box-shadow: $top $left $blur $color;
+    }
+}

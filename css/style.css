@@ -1,0 +1,220 @@
+.left_column {
+  background-color: #fff;
+  color: #757575; }
+
+.nav-img {
+  background-image: url("../assets/img/avatar_hat.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: flex-end; }
+  .nav-img .img-name {
+    margin: 10px;
+    font-size: 30px;
+    color: black; }
+
+.nav_content {
+  padding: 16px; }
+
+.nav_desc {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; }
+  .nav_desc .desc_item {
+    margin: 8px 0; }
+    .nav_desc .desc_item .desc_item_name {
+      padding-left: 10px; }
+
+.main-skills-container {
+  margin-top: 15px; }
+  .main-skills-container .skills-header {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    display: inline-block;
+    padding-left: 10px; }
+  .main-skills-container .navbar_header_languages {
+    margin-top: 25px; }
+  .main-skills-container .skill_element_name {
+    font-size: 15px;
+    font-weight: normal;
+    padding: 10px 0px 10px; }
+  .main-skills-container .percent .percent_value {
+    color: #fff !important;
+    background-color: #009688 !important;
+    font-size: 12px !important;
+    margin: 10px 10px 10px 0 !important; }
+
+.main_skills_container_language .skills-header-languages {
+  padding: 40px 0 20px 0; }
+
+.main_skills_container_language .percent .percent_value {
+  height: 25px;
+  background-color: #009688 !important; }
+
+.main_skills_container_language .skill_element_name {
+  padding: 20px 0 20px 0; }
+
+.main_skills_container_language .skills-header-languages {
+  font-size: 18px !important;
+  display: inline-block;
+  padding-left: 10px; }
+
+.work_experience {
+  padding: 0.01em 16px;
+  color: #757575 !important; }
+  .work_experience h1 {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0;
+    display: inline-block;
+    padding-left: 10px; }
+  .work_experience #icon_style {
+    font-size: 35px; }
+
+.main_section {
+  padding-left: 20px; }
+  .main_section .section_element {
+    padding: 30px 0 30px 0; }
+    .main_section .section_element p {
+      font-size: 15px;
+      line-height: 1.5em; }
+    .main_section .section_element .text {
+      color: black !important; }
+
+.section_experience_header {
+  font-weight: bolder;
+  font-size: 18px;
+  margin-bottom: 15px; }
+
+.section_experience_date {
+  color: #009688 !important;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  display: inline-block; }
+
+.current_date {
+  background-color: #009688;
+  color: #fff;
+  border-radius: 4px;
+  padding: 3px 8px; }
+
+.education {
+  padding: 0.01em 16px;
+  color: #757575 !important; }
+  .education h1 {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0;
+    display: inline-block;
+    padding-left: 10px; }
+  .education #icon_style {
+    font-size: 35px; }
+
+.footer_container {
+  color: #fff;
+  text-align: center; }
+  .footer_container small {
+    font-size: 16px;
+    display: block;
+    padding-bottom: 20px; }
+  .footer_container p {
+    margin-top: 15px; }
+    .footer_container p a {
+      color: #fff; }
+  .footer_container #icon_style {
+    color: white !important; }
+
+* {
+  margin: 0;
+  font-family: sans-serif; }
+
+body {
+  background-color: #f1f1f1 !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1400px;
+  font-family: "Roboto", sans-serif; }
+
+i {
+  color: #009688; }
+
+.main_container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  min-height: 100vh;
+  grid-template-areas: "left_column work_experience" "left_column education" "footer footer"; }
+
+.left_column {
+  grid-area: left_column;
+  box-shadow: 1px 2px 9px #333; }
+  .left_column .percent {
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: #f1f1f1; }
+    .left_column .percent .percent_value {
+      width: 50%;
+      display: inline-block;
+      border-radius: 50px;
+      color: white;
+      padding: 2px;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+      background-color: blue; }
+
+.work_experience {
+  grid-area: work_experience;
+  background-color: white;
+  box-shadow: 1px 2px 9px #333; }
+  .work_experience .percent {
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: #f1f1f1; }
+    .work_experience .percent .percent_value {
+      width: 50%;
+      display: inline-block;
+      border-radius: 50px;
+      color: white;
+      padding: 2px;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+      background-color: blue; }
+
+.education {
+  grid-area: education;
+  background-color: white;
+  box-shadow: 1px 2px 9px #333; }
+  .education .percent {
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: #f1f1f1; }
+    .education .percent .percent_value {
+      width: 50%;
+      display: inline-block;
+      border-radius: 50px;
+      color: white;
+      padding: 2px;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+      background-color: blue; }
+
+.footer {
+  grid-area: footer;
+  padding: 15px;
+  background-color: #009688; }
