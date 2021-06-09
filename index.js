@@ -110,7 +110,6 @@ const iconSectionElement = [
 for (let i = 0; i <= date.length; i++) {
     const mainSection = document.createElement("div");
     mainSection.className = "main_section";
-    const hr = document.createElement("hr");
     const sectionElement = document.createElement("div");
     sectionElement.className = "section_element";
     const h2 = document.createElement("h2");
@@ -136,7 +135,6 @@ for (let i = 0; i <= date.length; i++) {
     div.append(icon)
     div.append(par)
     sectionElement.append(parText)
-    sectionElement.append(hr)
     workExperience.append(sectionElement)
 };
 
@@ -147,10 +145,10 @@ const mainSectionTitles = getHtmlElement('h1', education, 'educat');
 mainSectionTitles.textContent = "Education";
 
 const educations = ["W3Schools.com", "London Business School", "School of Coding"]
-const educationsDate = ["Forever", "  2013 - 2015", '2010 - 2013']
+const educationsDate = ["Forever", "2013 - 2015", '2010 - 2013']
 const educationsProf = ["Web Development! All I need to know in one place", 'Bachelor Degree', 'Bachelor Degree']
 
-for (let i = 0; i <= educations.length; i++) {
+for (let i = 0; i < educations.length; i++) {
     const mainSection = document.createElement("div");
     mainSection.className = "main_section";
     const sectionElement = document.createElement("div");
