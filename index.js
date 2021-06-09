@@ -45,30 +45,53 @@ const skillsHeader = getHtmlElement("span", mainSkillsContainer, "skills-header"
 skillsHeader.textContent = "Skills";
 
 const profession = ["Adobe Photoshop", "Photography", "Illustrator", "Media"]
+const pracent = ['90%', '80%', '75%', '50%']
 for (let i = 0; i < profession.length; i++) {
+    const percent = document.createElement("div");
+    percent.className = "percent";
+
+    const percentValue = document.createElement("span");
+    percentValue.style.width = pracent[i]
+    percentValue.style.height = '20px';
+    percentValue.className = "percent_value";
+    percentValue.textContent = pracent[i];
+
     const p = document.createElement("p");
     p.className = "skill_element_name";
-    // const icon = document.createElement("i");
-    // icon.className = navigationIcons[i];
-    // const span = document.createElement("span");
-    // span.className = "desc_item_name"
     p.textContent = profession[i];
-    // descItem.append(span);
-    // descItem.prepend(icon);
+
+    percent.append(percentValue);
     mainSkillsContainer.append(p);
+    mainSkillsContainer.append(percent);
 };
 
+const Languages = ["English", "Spanish", "German"]
+const legPercent = ["100%", '50%', '20%']
+for (let i = 0; i < Languages.length; i++) {
+    const percent = document.createElement("div");
+    percent.className = "percent";
 
+    const percentValue = document.createElement("span");
+    percentValue.style.width = legPercent[i];
+    percentValue.style.height = '30px';
+    percentValue.className = "percent_value";
+
+    const p = document.createElement("p");
+    p.className = "skill_element_name";
+    p.textContent = Languages[i];
+
+    percent.append(percentValue);
+    mainSkillsContainer.append(p);
+    mainSkillsContainer.append(percent);
+};
 
 const workExperience = getHtmlElement('section', main, 'work_experience');
 const mainSectionTitleIcon = getHtmlElement('i', workExperience, 'fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal');
 mainSectionTitleIcon.id = "icon_style";
 const mainSectionTitle = getHtmlElement('h1', workExperience, 'Work Experiance');
-mainSectionTitle.textContent = "Work Experience"
+mainSectionTitle.textContent = "Work Experience";
 
-// const sectionElement = getHtmlElement("div", workExperience, "main_section")
-// const section_experience_header = getHtmlElement("div", workExperience, "section_element")
-const date = ["Jan 2015 ", " Mar 2012 - Dec 2014", " Jun 2010 - Mar 2012"]
+const date = ["Jan 2015 ", " Mar 2012 - Dec 2014", " Jun 2010 - Mar 2012"];
 const text = ["Lorem ipsum dolor sit amet. Praesentium magnam Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel consectetur vel Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel"
     , "Lorem ipsum dolor sit amet. Praesentium magnam Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel consectetur vel Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel",
     "Lorem ipsum dolor sit amet. Praesentium magnam Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel consectetur vel Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel"];
@@ -76,13 +99,13 @@ const titleSectionElement = [
     " Front End Developer",
     " Web Developer / something.com",
     "Graphic Designer / designsomething.com"
-]
+];
 
 const iconSectionElement = [
     " fa fa-calendar fa-fw w3-margin-right",
     " fa fa-calendar fa-fw w3-margin-right",
     " fa fa-calendar fa-fw w3-margin-right"
-]
+];
 
 for (let i = 0; i <= date.length; i++) {
     const mainSection = document.createElement("div");
@@ -117,20 +140,15 @@ for (let i = 0; i <= date.length; i++) {
     workExperience.append(sectionElement)
 };
 
-const education=getHtmlElement('section', main, 'education');
-const mainEduacationSectionTitleIcon=getHtmlElement('section', education, "fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal");
+const education = getHtmlElement('section', main, 'education');
+const mainEduacationSectionTitleIcon = getHtmlElement('section', education, "fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal");
 mainEduacationSectionTitleIcon.id = "icon_style";
 const mainSectionTitles = getHtmlElement('h1', education, 'educat');
-mainSectionTitles.textContent = "Education"
+mainSectionTitles.textContent = "Education";
 
-
-
-
-
-
-const educations=["W3Schools.com","London Business School","School of Coding"]
-const educationsDate=["Forever","  2013 - 2015", '2010 - 2013']
-const educationsProf=["Web Development! All I need to know in one place",'Bachelor Degree','Bachelor Degree']
+const educations = ["W3Schools.com", "London Business School", "School of Coding"]
+const educationsDate = ["Forever", "  2013 - 2015", '2010 - 2013']
+const educationsProf = ["Web Development! All I need to know in one place", 'Bachelor Degree', 'Bachelor Degree']
 
 for (let i = 0; i <= educations.length; i++) {
     const mainSection = document.createElement("div");
@@ -163,5 +181,32 @@ for (let i = 0; i <= educations.length; i++) {
     education.append(sectionElement)
 };
 
+const footer = getHtmlElement('footer', main, 'footer');
+const footerContainer = document.createElement('div');
+footerContainer.className = "footer_container"
+const smallFooter = document.createElement('small');
+smallFooter.textContent = "Find me on social media"
+footerContainer.append(smallFooter)
 
+
+const footerIcons = ['fa fa-facebook-official w3-hover-opacity', 'fa fa-instagram w3-hover-opacity',
+    'fa fa-snapchat w3-hover-opacity', 'fa fa-pinterest-p w3-hover-opacity',
+    'fa fa-twitter w3-hover-opacity', 'fa fa-linkedin w3-hover-opacity'
+];
+
+for (let i = 0; i < footerIcons.length; i++) {
+    const icon = document.createElement("i");
+    icon.className = footerIcons[i]
+    icon.id = "icon_style";
+    icon.style.padding = "5px"
+    footerContainer.append(icon)
+    footer.append(footerContainer)
+};
+
+const footerPar = document.createElement("p");
+footerPar.textContent = "Powered by"
+const footerA = document.createElement("a");
+footerA.textContent = "w3.css"
+footerPar.append(footerA)
+footerContainer.append(footerPar)
 
